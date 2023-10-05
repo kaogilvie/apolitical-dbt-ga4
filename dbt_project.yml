@@ -2,16 +2,12 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'my_project'
+name: 'ga4_mvs'
 version: '0.0.1'
 config-version: 2
 
-# This setting configures which "profile" dbt uses for this project.
-profile: 'my_profile'
+profile: 'default'
 
-# These configurations specify where dbt should look for different types of files.
-# The `model-paths` config, for example, states that models in this project can be
-# found in the "models/" directory. You probably won't need to change these!
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
@@ -24,43 +20,40 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
-# Configuring models
-# Full documentation: https://docs.getdbt.com/docs/configuring-models
-
 # N.B. materialisation settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  my_project:
+  ga4_mvs:
     # Config indicated by +
-    base:
+    ga4_base:
       +docs:
         node_color: DarkGreen
       +materialized: view
       +persist_docs:
         relation: true
         columns: true
-      +schema: base
-    intermediate:
+      +schema: ga4_base
+    ga4_intermediate:
       +docs:
         node_color: SteelBlue
       +materialized: ephemeral
       +persist_docs:
         relation: true
         columns: true
-      +schema: intm
-    marts:
+      +schema: ga4_intim
+    ga4_marts:
       +docs:
         node_color: FireBrick
       +materialized: table
       +persist_docs:
         relation: true
         columns: true
-      +schema: marts
+      +schema: ga4_marts
 
 tests:
   +severity: warn
 
 
 vars:
-  my_project:
+  ga4_mvs:
     example_var: DATE('2023-01-01')

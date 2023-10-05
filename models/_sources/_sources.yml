@@ -4,8 +4,8 @@ sources:
 
   - name: google_analytics
     description: "Google Analytics 4 export"
-    database: project-id
-    schema: analytics_111111111
+    database: infinite-library-learning-app
+    schema: analytics_374884044
     tables:
       - name: events
         identifier: events_*
