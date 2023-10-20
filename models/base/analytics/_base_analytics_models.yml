@@ -40,11 +40,6 @@ models:
         description: "The sequential ID of the bundle in which these events were uploaded"
       - name: event_server_timestamp_offset
         description: "Timestamp offset between collection time and upload time in microseconds"
-      - name: is_logged_in
-        description: "Indicates whether a user was logged-in or not when the event was generated"
-        tests:
-          - not_null
-          - is_boolean
       - name: user_id
         description: "Identifies a (logged-in) platform user, or '0' if they were logged out"
         tests:

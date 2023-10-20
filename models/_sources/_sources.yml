@@ -4,8 +4,8 @@ sources:
 
   - name: google_analytics
     description: "Google Analytics 4 export"
-    database: infinite-library-learning-app
-    schema: analytics_374884044
+    database: "{{ var('ga4_project')}}"
+    schema: "{{ var('ga4_analytics_schema')}}"
     tables:
       - name: events
         identifier: events_*
