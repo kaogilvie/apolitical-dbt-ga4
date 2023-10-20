@@ -7,7 +7,7 @@ models:
       Incrementally materialised table containing records of Google Analytics events
     columns:
       - name: event_id
-          Unique identifier for a particular Google Analytics event
+        description: Unique identifier for a particular Google Analytics event
         tests:
           - not_null
           - unique
@@ -115,12 +115,4 @@ models:
         description: >
           Where relevant, the sharing medium for the incoming session
           (as encoded in the landing page query parameters)
-      - name: acquisition_channel
-        description: >
-          The acquisition channel associated with the session (based on our internal definition).
-          Allowed values:
-          direct, email, government, other-referral, search, social, and uncategorised.
-        tests:
-          - accepted_values:
-              values: [direct, email, government, other-referral, search, social, uncategorised]
 

@@ -54,4 +54,8 @@ tests:
 
 vars:
   ga4_mvs:
-    example_var: DATE('2023-01-01')
+    # ga4_project: "infinite-library-learning-app"
+    ga4_project: "dataflow-infrastructure"
+    # ga4_analytics_schema: "analytics_374884044"
+    ga4_analytics_schema: "analytics_263250344"
+    ua_ga4_stitch_date: '1999-01-01'
