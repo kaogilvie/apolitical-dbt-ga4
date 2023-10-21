@@ -23,30 +23,30 @@ clean-targets:         # directories to be removed by `dbt clean`
 # N.B. materialisation settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  ga4_base:
+  base:
     +docs:
       node_color: DarkGreen
     +materialized: view
     +persist_docs:
       relation: true
       columns: true
-    +schema: ga4_base
-  ga4_intermediate:
+    +schema: dbt_ga4
+  intermediate:
     +docs:
       node_color: SteelBlue
     +materialized: ephemeral
     +persist_docs:
       relation: true
       columns: true
-    +schema: ga4_intim
-  ga4_marts:
+    +schema: dbt_ga4
+  marts:
     +docs:
       node_color: FireBrick
     +materialized: table
     +persist_docs:
       relation: true
       columns: true
-    +schema: ga4_marts
+    +schema: dbt_ga4
 
 tests:
   +severity: warn
