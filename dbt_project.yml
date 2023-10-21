@@ -21,30 +21,31 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_packages"
 
 models:
-  base:
-    +docs:
-      node_color: DarkGreen
-    +materialized: view
-    +persist_docs:
-      relation: true
-      columns: true
-    +schema: dbt_ga4
-  intermediate:
-    +docs:
-      node_color: SteelBlue
-    +materialized: ephemeral
-    +persist_docs:
-      relation: true
-      columns: true
-    +schema: dbt_ga4
-  marts:
-    +docs:
-      node_color: FireBrick
-    +materialized: table
-    +persist_docs:
-      relation: true
-      columns: true
-    +schema: dbt_ga4
+  ga4_mvs:
+    base:
+      +docs:
+        node_color: DarkGreen
+      +materialized: view
+      +persist_docs:
+        relation: true
+        columns: true
+      +schema: dbt_ga4
+    intermediate:
+      +docs:
+        node_color: SteelBlue
+      +materialized: ephemeral
+      +persist_docs:
+        relation: true
+        columns: true
+      +schema: dbt_ga4
+    marts:
+      +docs:
+        node_color: FireBrick
+      +materialized: table
+      +persist_docs:
+        relation: true
+        columns: true
+      +schema: dbt_ga4
 
 tests:
   +severity: warn
