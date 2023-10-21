@@ -29,7 +29,7 @@ models:
       +persist_docs:
         relation: true
         columns: true
-      +schema: dbt_ga4
+      +schema: ga4
     intermediate:
       +docs:
         node_color: SteelBlue
@@ -37,7 +37,7 @@ models:
       +persist_docs:
         relation: true
         columns: true
-      +schema: dbt_ga4
+      +schema: ga4
     marts:
       +docs:
         node_color: FireBrick
@@ -45,7 +45,7 @@ models:
       +persist_docs:
         relation: true
         columns: true
-      +schema: dbt_ga4
+      +schema: ga4
 
 tests:
   +severity: warn
