@@ -27,6 +27,7 @@
         LAST_VALUE(operating_system) OVER(session_window) AS operating_system,
         FIRST_VALUE(event_date) OVER(session_window) AS session_date,
         FIRST_VALUE(event_timestamp) OVER(session_window) AS session_initiated,
+        LAST_VALUE(event_timestamp) OVER(session_window) AS session_terminated,
         FIRST_VALUE(page_location) OVER(session_window) AS landing_page, 
         LAST_VALUE(page_location) OVER(session_window) AS exit_page,
         FIRST_VALUE(traffic_source) OVER(session_window) AS traffic_source,
