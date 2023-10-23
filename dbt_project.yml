@@ -2,8 +2,8 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'ga4_mvs'
-version: '0.0.1'
+name: 'ga4_stg'
+version: '0.0.2'
 config-version: 2
 
 profile: 'default'
@@ -21,7 +21,7 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_packages"
 
 models:
-  ga4_mvs:
+  ga4_stg:
     base:
       +docs:
         node_color: DarkGreen
