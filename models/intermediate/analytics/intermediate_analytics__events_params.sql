@@ -30,6 +30,7 @@
         -- fields extracted from various struct fields:
         geo.continent AS continent,
         geo.country AS country,
+        app_info.id as app_id,
         device.category AS device_type,
         device.web_info.browser AS browser,
         device.operating_system AS operating_system,

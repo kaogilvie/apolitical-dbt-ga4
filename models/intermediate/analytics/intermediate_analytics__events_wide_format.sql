@@ -23,6 +23,7 @@
         event_timestamp,
         client_id,
         user_id,
+        app_id,
         event_name,
         continent,
         country,
