@@ -19,6 +19,7 @@
   DISTINCT -- window functions will produce multiple equivalent records
         session_id,
         client_id,
+        app_id,
         -- apply window calculations
         LAST_VALUE(continent) OVER(session_window) AS continent,
         LAST_VALUE(country) OVER(session_window) AS country,
@@ -47,7 +48,7 @@
 {% endif %}
     WINDOW -- 
         session_window AS (
-            PARTITION BY session_id
+            PARTITION BY session_id, app_id
                 ORDER BY event_timestamp
             ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
         )    

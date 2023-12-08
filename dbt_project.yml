@@ -52,7 +52,7 @@ tests:
 
 
 vars:
-  ga4_mvs:
+  ga4_stg:
     # ga4_project: "infinite-library-learning-app"
     ga4_project: "dataflow-infrastructure"
     # ga4_analytics_schema: "analytics_374884044"
